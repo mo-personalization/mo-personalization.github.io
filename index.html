@@ -956,6 +956,18 @@
     .metric-card:nth-child(5) { --c1: #1f5fb0; --c2: #6aa3e0; }
     .metric-card:nth-child(6) { --c1: #4346c9; --c2: #8e90e0; }
     .metric-card:nth-child(7) { --c1: #C79A00; --c2: #FFC000; }
+    /* --- readability + nav presence pass --- */
+    /* bigger, always-visible sticky nav */
+    .topnav { padding: 1.05rem clamp(1rem, 4vw, 2.25rem); background: rgba(255,255,255,0.72); backdrop-filter: blur(10px) saturate(160%); -webkit-backdrop-filter: blur(10px) saturate(160%); border-bottom: 1px solid rgba(229,231,235,0.7); }
+    .topnav.solid { box-shadow: var(--shadow-md); background: rgba(255,255,255,0.9); }
+    .topnav .brand { font-size: 1.14rem; }
+    .topnav .navlinks { gap: clamp(1.1rem, 2.2vw, 1.9rem); }
+    .topnav .navlinks a { font-size: 0.95rem; }
+    /* larger, darker body intro text (was small + faint gray) */
+    p.lead { font-size: clamp(1.06rem, 1.5vw, 1.2rem); line-height: 1.7; color: #3f4663; }
+    /* soften the heavy near-black problem statement */
+    .problem-punch { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 600; color: #2a2a55; line-height: 1.3; }
+    .solution-box p { color: #2f3550; }
   </style>
 </head>
 <body>
