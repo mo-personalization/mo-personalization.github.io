@@ -892,6 +892,57 @@
     .footer-logos { display: flex; align-items: center; justify-content: center; gap: 1.1rem; margin-bottom: 1.1rem; }
     .footer-logos img { height: 30px; }
     .footer-logos .div { width: 1px; height: 26px; background: var(--border); }
+    /* --- LIGHT, ON-BRAND HERO (overrides the reference dark hero) --- */
+    .hero-section {
+      background:
+        radial-gradient(55% 70% at 50% 0%, #eef0ff 0%, transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #f4f6ff 58%, #ffffff 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-section::after {
+      background-image:
+        linear-gradient(rgba(48,49,146,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(48,49,146,0.045) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: radial-gradient(circle at 50% 38%, #000 0%, transparent 75%);
+      -webkit-mask-image: radial-gradient(circle at 50% 38%, #000 0%, transparent 75%);
+    }
+    #neural { opacity: 0.45; }
+    .hero::before {
+      background:
+        radial-gradient(40% 50% at 24% 30%, rgba(48,49,146,0.12), transparent 70%),
+        radial-gradient(40% 45% at 78% 25%, rgba(67,70,201,0.12), transparent 70%),
+        radial-gradient(45% 50% at 55% 78%, rgba(255,192,0,0.12), transparent 72%);
+      filter: blur(22px);
+    }
+    .hero .eyebrow {
+      color: var(--purple);
+      border: 1px solid rgba(48,49,146,0.25);
+      background: rgba(48,49,146,0.06);
+      backdrop-filter: none;
+    }
+    .hero h1, .hero h1 .word {
+      background: linear-gradient(110deg, #303192 0%, #4346c9 45%, #1f5fb0 70%, #303192 100%);
+      background-size: 250% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+      filter: drop-shadow(0 2px 14px rgba(48,49,146,0.16));
+    }
+    .hero p { color: #5a6080; }
+    .hero .links .btn-outline {
+      border: 1.5px solid rgba(48,49,146,0.35);
+      color: var(--purple);
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+    }
+    .hero .links .btn-outline:hover {
+      border-color: var(--purple);
+      box-shadow: 0 0 22px rgba(48,49,146,0.18);
+    }
+    /* nav brand + links visible over the light hero from the top */
+    .topnav .brand { color: var(--purple); text-shadow: none; }
+    .topnav .navlinks a { color: var(--muted); }
+    .topnav .navlinks a:hover { color: var(--purple); }
   </style>
 </head>
 <body>
