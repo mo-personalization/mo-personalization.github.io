@@ -980,6 +980,19 @@
     .cta-logos { display: flex; align-items: center; justify-content: center; gap: 1.1rem; }
     .cta-logos img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: 0.95; }
     .cta-logos .div { width: 1px; height: 26px; background: rgba(255,255,255,0.3); }
+    /* --- business-POV content components --- */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1.5rem; margin-top: 2.6rem; }
+    .feature-card { position: relative; padding: 1.7rem 1.6rem; background: #fff; border: 1px solid var(--border); border-top: 3px solid var(--purple); border-radius: 16px; box-shadow: var(--shadow-sm); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .feature-card .fc-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--purple); }
+    .feature-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 600; color: #2a2a55; margin: 0.35rem 0 0.6rem; line-height: 1.2; }
+    .feature-card p { font-size: 0.96rem; line-height: 1.6; color: #3f4663; }
+    .disc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.4rem; margin-top: 2.2rem; }
+    .disc-item { text-align: center; padding: 1.6rem 1.2rem; background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow-sm); }
+    .disc-item .n { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 700; color: var(--purple); line-height: 1; }
+    .disc-item .l { font-size: 0.92rem; color: #3f4663; margin-top: 0.5rem; }
+    .disc-note, .validation-note { margin-top: 1.6rem; font-size: 0.92rem; color: var(--muted); max-width: 780px; }
+    .validation-note { border-left: 3px solid var(--gold); padding-left: 1rem; }
   </style>
 </head>
 <body>
@@ -1000,9 +1013,10 @@
   <div class="navlinks">
     <a href="#video">Video</a>
     <a href="#about">Problem</a>
-    <a href="#how">How it works</a>
-    <a href="#action">In action</a>
+    <a href="#personas">Personas</a>
+    <a href="#discovery">Discovery</a>
     <a href="#impact">Impact</a>
+    <a href="#trust">Trust</a>
   </div>
 </nav>
 
@@ -1010,9 +1024,9 @@
 <section class="hero-section" id="top">
   <canvas id="neural"></canvas>
   <div class="hero">
-    <p class="eyebrow reveal">AI-Driven &middot; Motilal Oswal &middot; RIISE App &middot; Live in Production</p>
+    <p class="eyebrow reveal">Live in production &middot; ~50% of MOFSL retail clients &middot; Built in-house</p>
     <h1 id="heroTitle">Every Investor Gets a Different Home Page</h1>
-    <p class="reveal">One behavioural foundation powering the RIISE home page and tailored omnichannel communications for every investor &mdash; built in-house at Motilal Oswal.</p>
+    <p class="reveal">A first-time SIP investor, a long-term mutual-fund holder, and an active F&amp;O trader each open a different RIISE home page &mdash; showing the products, tools and ideas that matter to them. The same understanding tailors every message, too.</p>
     <div class="links reveal">
       <a href="#video" class="btn-primary">Watch the 2-min Video</a>
       <a href="#impact" class="btn-outline">See the Impact</a>
@@ -1025,7 +1039,7 @@
   <div class="container wide reveal">
     <p class="section-label">Watch</p>
     <h2>The MO Personalization Suite in two minutes</h2>
-    <p class="lead">A two-minute walkthrough of the behavioural foundation, the two-stage ranker, and the live results on the RIISE app.</p>
+    <p class="lead">A two-minute walkthrough &mdash; how the RIISE home page rebuilds itself around each investor, and the results it's driving live.</p>
     <div class="video-frame">
       <video controls playsinline preload="metadata">
         <source src="videos/ET-HPVideo.mp4" type="video/mp4" />
@@ -1040,20 +1054,20 @@
   <div class="stat"><span class="number" data-count="5.7" data-prefix="+" data-suffix="%">0</span><span class="label">Widget Engagement Lift</span></div>
   <div class="stat"><span class="number" data-count="24" data-prefix="+" data-suffix="%">0</span><span class="label">Mutual Fund Discovery</span></div>
   <div class="stat"><span class="number" data-count="2.1" data-suffix="x">0</span><span class="label">Fixed Deposit Engagement</span></div>
-  <div class="stat"><span class="number" data-count="18">0</span><span class="label">Behavioural Segments Live</span></div>
+  <div class="stat"><span class="number" data-count="18">0</span><span class="label">Investor Segments Live</span></div>
 </div>
 
-<!-- ABOUT / PROBLEM -->
+<!-- PROBLEM -->
 <section id="about">
   <div class="container wide reveal">
     <p class="section-label">The Problem</p>
-    <h2>The same home page. For everyone.</h2>
+    <h2>One home page. Built for no one.</h2>
     <div class="problem-flow">
-      <p class="lead">Most investing apps show every user the <strong>same home page</strong> &mdash; same widgets, same asset-class tiles, same tools &mdash; whether you're a first-time SIP investor or an active F&amp;O trader.</p>
-      <p class="problem-punch">Relevant products stay buried. Communications feel like <span class="hl">spam</span>.</p>
+      <p class="lead">Most investing apps show every customer the <strong>same home page</strong> &mdash; the same tiles, the same tools &mdash; whether you're making your first SIP or trading options every morning.</p>
+      <p class="problem-punch">So the right products stay buried, and every message feels like <span class="hl">spam</span>.</p>
       <div class="solution-box">
         <span class="sol-label">The Solution</span>
-        <p>The <strong>MO Personalization Suite</strong> closes that gap &mdash; one behavioural foundation that reorders every widget per user and tailors communications across push, email, SMS, and WhatsApp. Live on the RIISE app today.</p>
+        <p>The <strong>MO Personalization Suite</strong> rebuilds the home page around each investor &mdash; and tailors every communication to how they actually invest. One foundation, live on the RIISE app today.</p>
       </div>
     </div>
   </div>
@@ -1061,82 +1075,122 @@
 
 <hr />
 
-<!-- ARCHITECTURE -->
-<section id="products" class="alt">
+<!-- PERSONAS -->
+<section id="personas" class="alt">
   <div class="container wide reveal">
-    <p class="section-label">Architecture</p>
-    <h2>One foundation &rarr; two surfaces</h2>
-    <p class="lead">A single feature store and an 18-segment behavioural taxonomy power both home-page personalization and omnichannel communications. A ranker scores every widget; a re-ranker adds diversity, popularity, and cross-sell.</p>
-    <figure class="figure">
-      <img src="images/arch.png" alt="MO Personalization Suite architecture" loading="lazy" />
-      <figcaption>One feature store + segment taxonomy &rarr; the home page and communications.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how">
-  <div class="container wide reveal">
-    <p class="section-label">How It Works</p>
-    <h2>A behavioural foundation and a two-stage ranker</h2>
-    <p class="lead">Two components do the work: a behavioural foundation that turns hundreds of features into clear segments, and a two-stage ranker that surfaces the widgets each user actually wants.</p>
-    <figure class="figure"><img src="images/components.png" alt="Personalization Suite components" loading="lazy" /></figure>
-  </div>
-</section>
-
-<!-- LIVE DEPLOYMENT -->
-<section class="alt">
-  <div class="container wide reveal">
-    <p class="section-label">Live Deployment</p>
-    <h2>Live on the RIISE app</h2>
-    <p class="lead">The same feature store and 18-segment taxonomy drive per-user widget order on the home page and tailored content across four channels &mdash; push, email, SMS, and WhatsApp. Next, we're extending it to every RIISE surface.</p>
-    <figure class="figure"><img src="images/deploy.png" alt="Live deployment across surfaces" loading="lazy" /></figure>
-  </div>
-</section>
-
-<!-- PERSONALIZATION IN ACTION -->
-<section id="action">
-  <div class="container wide reveal">
-    <p class="section-label">In Action</p>
-    <h2>The same page, reordered for each user</h2>
-    <p class="lead">On the left, the default home page &mdash; the same for everyone. On the right, the same page personalized for one user: the ranker reorders asset-class tiles, the navigation rail, and recommended offerings, so what matters rises to the top.</p>
-    <div class="compare">
-      <div class="col"><div class="tag">Default &middot; same for everyone</div><img src="images/default.png" alt="Default RIISE home page" loading="lazy" /></div>
-      <div class="arrow"><span class="a">&rarr;</span><span class="l">Ranker + Re-ranker</span></div>
-      <div class="col"><div class="tag on">Personalized &middot; one user</div><img src="images/personalized.png" alt="Personalized RIISE home page" loading="lazy" /></div>
+    <p class="section-label">Personalized for everyone</p>
+    <h2>The same app. Three different home pages.</h2>
+    <p class="lead">Personalization rebuilds the RIISE home page around who each investor actually is &mdash; so what matters to them rises to the top, and what doesn't gets out of the way.</p>
+    <div class="card-grid" data-stagger>
+      <div class="feature-card">
+        <span class="fc-tag">First-time SIP investor</span>
+        <h3>A calm place to start</h3>
+        <p>Sees simple SIP set-up, goal-based mutual funds, and learn-as-you-go tools up top &mdash; not an option chain they'll never open.</p>
+      </div>
+      <div class="feature-card">
+        <span class="fc-tag">Long-term MF holder</span>
+        <h3>Grow what they already hold</h3>
+        <p>Sees portfolio health, plus relevant Fixed Deposit and Mutual Fund ideas and diversification nudges &mdash; products they'd otherwise scroll right past.</p>
+      </div>
+      <div class="feature-card">
+        <span class="fc-tag">Active F&amp;O trader</span>
+        <h3>Straight to the desk</h3>
+        <p>Sees the option chain, F&amp;O research ideas, and fast execution tools first &mdash; no clutter, straight to what they use every day.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SEGMENT EXAMPLES -->
-<section class="alt">
+<!-- IN ACTION -->
+<section id="action">
   <div class="container wide reveal">
-    <p class="section-label">Segment Examples</p>
-    <h2>18 segments, not just labels</h2>
-    <p class="lead">The taxonomy drives differentiated communications for each cohort &mdash; non-equity clients get diversification nudges, holding-horizon cohorts get content matched to how long they invest, and early churn signals trigger re-engagement, not spam.</p>
+    <p class="section-label">In Action</p>
+    <h2>The same page, reordered for what matters to you</h2>
+    <p class="lead">On the left, the old home page &mdash; identical for everyone. On the right, the same page rebuilt for one investor: the tiles, tools, and ideas they use most, moved to the top.</p>
+    <div class="compare">
+      <div class="col"><div class="tag">Before &middot; same for everyone</div><img src="images/default.png" alt="Default RIISE home page" loading="lazy" /></div>
+      <div class="arrow"><span class="a">&rarr;</span><span class="l">Personalized</span></div>
+      <div class="col"><div class="tag on">After &middot; built for one investor</div><img src="images/personalized.png" alt="Personalized RIISE home page" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVERY -->
+<section id="discovery" class="alt">
+  <div class="container wide reveal">
+    <p class="section-label">Discovery</p>
+    <h2>Products you'd never have scrolled to</h2>
+    <p class="lead">Personalization doesn't just reorder what investors already use &mdash; it surfaces genuinely relevant products that were buried before. And when the right customers finally see them, they engage. Measured live against the old generic home page:</p>
+    <div class="disc-grid" data-stagger>
+      <div class="disc-item"><div class="n">2.1&times;</div><div class="l">Fixed Deposit engagement</div></div>
+      <div class="disc-item"><div class="n">+24%</div><div class="l">Mutual Fund engagement</div></div>
+      <div class="disc-item"><div class="n">+9%</div><div class="l">Commodity engagement</div></div>
+    </div>
+    <p class="disc-note">These are exactly the categories a popularity-ranked home page buries &mdash; surfaced here to the investors they actually fit.</p>
+  </div>
+</section>
+
+<!-- COMMUNICATIONS -->
+<section id="comms">
+  <div class="container wide reveal">
+    <p class="section-label">Communications</p>
+    <h2>Messages that feel personal, not spam</h2>
+    <p class="lead">The same understanding that personalizes the home page tailors every message &mdash; so a non-equity investor gets a diversification nudge, and a customer drifting away gets a real reason to come back. Across push, email, SMS, and WhatsApp.</p>
     <div class="seg-grid" data-stagger>
-      <img src="images/seg01.png" alt="Segment example 1" loading="lazy" />
-      <img src="images/seg02.png" alt="Segment example 2" loading="lazy" />
-      <img src="images/seg03.png" alt="Segment example 3" loading="lazy" />
+      <img src="images/seg01.png" alt="Personalized communication example 1" loading="lazy" />
+      <img src="images/seg02.png" alt="Personalized communication example 2" loading="lazy" />
+      <img src="images/seg03.png" alt="Personalized communication example 3" loading="lazy" />
     </div>
     <figure class="figure narrow"><img src="images/banner.png" alt="Personalized communication banner" loading="lazy" /></figure>
   </div>
 </section>
 
-<!-- METRICS -->
-<section id="impact">
+<!-- IMPACT -->
+<section id="impact" class="alt">
   <div class="container wide reveal">
     <p class="section-label">Performance &amp; Impact</p>
-    <h2>A/B test results on the live app</h2>
-    <p class="lead">Treatment vs control on the live RIISE app. Personalization lifted engagement, drove tail asset-class discovery, and grew brokerage revenue &mdash; with 18 behavioural segments running in production.</p>
+    <h2>Proven on the live app</h2>
+    <p class="lead">Every number below comes from a live A/B test on the RIISE app &mdash; the personalized experience measured directly against the old generic home page, not a before/after estimate.</p>
     <div class="metrics-grid" data-stagger>
-      <div class="metric-card"><div class="val">+5.7%</div><div class="desc">Widget engagement on the personalized home page</div></div>
-      <div class="metric-card"><div class="val">+5.0%</div><div class="desc">Clicks per user</div></div>
-      <div class="metric-card"><div class="val">+24%</div><div class="desc">Mutual Fund homepage engagement &mdash; tail discovery</div></div>
+      <div class="metric-card"><div class="val">+5.7%</div><div class="desc">More engagement with the home page</div></div>
+      <div class="metric-card"><div class="val">+5.0%</div><div class="desc">More clicks per investor</div></div>
+      <div class="metric-card"><div class="val">+24%</div><div class="desc">Mutual Fund discovery</div></div>
       <div class="metric-card"><div class="val">2.1x</div><div class="desc">Fixed Deposit engagement</div></div>
       <div class="metric-card"><div class="val">+9%</div><div class="desc">Commodity engagement</div></div>
-      <div class="metric-card"><div class="val">+2.8%</div><div class="desc">Equity brokerage revenue</div></div>
-      <div class="metric-card"><div class="val">18</div><div class="desc">Behavioural segments live in production</div></div>
+      <div class="metric-card"><div class="val">+2.8%</div><div class="desc">Higher equity brokerage revenue</div></div>
+      <div class="metric-card"><div class="val">18</div><div class="desc">Investor segments live in production</div></div>
+    </div>
+    <p class="validation-note">Validated end-to-end: a built-in A/B control group, plus a three-layer governance chain &mdash; Business Strategy sign-off, controlled experimentation, and executive review &mdash; running across ~50% of MOFSL's retail base, pan-India in 550+ cities.</p>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section id="trust">
+  <div class="container wide reveal">
+    <p class="section-label">Built Responsibly</p>
+    <h2>Personalization you can trust</h2>
+    <p class="lead">Designed from day one to fit inside a regulated brokerage &mdash; on customers' own data, and only ever in their interest.</p>
+    <div class="card-grid" data-stagger>
+      <div class="feature-card">
+        <span class="fc-tag">SEBI-aligned</span>
+        <h3>Re-orders, never advises</h3>
+        <p>Personalizes the order of MOFSL's existing, approved widgets. It never recommends securities &mdash; staying clear of the advisory line by design.</p>
+      </div>
+      <div class="feature-card">
+        <span class="fc-tag">Private by design (DPDP)</span>
+        <h3>Nothing leaves MOFSL</h3>
+        <p>Trained only on MOFSL first-party data. No customer data is sent to any third-party API or LLM &mdash; it never leaves MOFSL's environment.</p>
+      </div>
+      <div class="feature-card">
+        <span class="fc-tag">Fair by design</span>
+        <h3>Everyone, every city</h3>
+        <p>Built to surface relevant-but-overlooked products, and to work as well for Tier-2 and Tier-3 investors as for metros &mdash; not just the popular picks.</p>
+      </div>
+      <div class="feature-card">
+        <span class="fc-tag">Resilient</span>
+        <h3>Never a point of failure</h3>
+        <p>If personalization is ever unavailable, the home page falls back to a safe default ordering &mdash; quality degrades gracefully, customers never see an outage.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1145,7 +1199,7 @@
 <section class="cta-band">
   <div class="container">
     <h2>Live on the RIISE app today</h2>
-    <p>One behavioural foundation, personalizing the home page and every communication for every investor.</p>
+    <p>One foundation, personalizing the home page and every communication for every investor.</p>
     <div class="cta-logos">
       <img src="images/mo-wealth-logo.png" alt="Motilal Oswal" />
       <span class="div"></span>
