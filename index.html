@@ -993,6 +993,15 @@
     .disc-item .l { font-size: 0.92rem; color: #3f4663; margin-top: 0.5rem; }
     .disc-note, .validation-note { margin-top: 1.6rem; font-size: 0.92rem; color: var(--muted); max-width: 780px; }
     .validation-note { border-left: 3px solid var(--gold); padding-left: 1rem; }
+    /* In Action — what changed for this investor */
+    .change-callout { max-width: 760px; margin: 2.4rem auto 0; background: #f6f8ff; border: 1px solid #e2e8ff; border-left: 4px solid var(--gold); border-radius: 14px; padding: 1.4rem 1.7rem; }
+    .change-callout .cc-head { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--purple); }
+    .change-callout .cc-who { font-size: 1.02rem; color: #2a2a55; margin: 0.45rem 0 1rem; line-height: 1.5; }
+    .cc-moves { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem; }
+    .cc-moves li { position: relative; padding-left: 1.8rem; font-size: 1rem; line-height: 1.45; color: #3f4663; }
+    .cc-moves li strong { color: var(--purple); font-weight: 600; }
+    .cc-moves li.up::before { content: "\2191"; position: absolute; left: 0; top: 0; color: #16a34a; font-weight: 800; }
+    .cc-moves li.down::before { content: "\2193"; position: absolute; left: 0; top: 0; color: #c0461f; font-weight: 800; }
   </style>
 </head>
 <body>
@@ -1112,15 +1121,24 @@
       <div class="arrow"><span class="a">&rarr;</span><span class="l">Personalized</span></div>
       <div class="col"><div class="tag on">After &middot; built for one investor</div><img src="images/personalized.png" alt="Personalized RIISE home page" loading="lazy" /></div>
     </div>
+    <div class="change-callout">
+      <div class="cc-head">What changed for this investor</div>
+      <p class="cc-who">Follows research, holds mutual funds, and trades actively.</p>
+      <ul class="cc-moves">
+        <li class="up"><strong>Research</strong> &amp; <strong>Mutual Funds</strong> pulled to the top</li>
+        <li class="up"><strong>Option Chain</strong> &amp; <strong>Flash News</strong> surfaced</li>
+        <li class="down"><strong>Commodity</strong>, rarely used, moved down</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- DISCOVERY -->
 <section id="discovery" class="alt">
   <div class="container wide reveal">
-    <p class="section-label">Discovery</p>
+    <p class="section-label">Tail Asset-Class Discovery</p>
     <h2>Products you'd never have scrolled to</h2>
-    <p class="lead">Personalization doesn't just reorder what investors already use &mdash; it surfaces genuinely relevant products that were buried before. And when the right customers finally see them, they engage. Measured live against the old generic home page:</p>
+    <p class="lead">Personalization surfaces the <strong>tail asset-class widgets</strong> that sit at the bottom of the home page for everyone &mdash; the relevant products investors would otherwise never reach. And when the right customers finally see them, they engage. Measured live against the old generic home page:</p>
     <div class="disc-grid" data-stagger>
       <div class="disc-item"><div class="n">2.1&times;</div><div class="l">Fixed Deposit engagement</div></div>
       <div class="disc-item"><div class="n">+24%</div><div class="l">Mutual Fund engagement</div></div>
@@ -1135,7 +1153,7 @@
   <div class="container wide reveal">
     <p class="section-label">Communications</p>
     <h2>Messages that feel personal, not spam</h2>
-    <p class="lead">The same understanding that personalizes the home page tailors every message &mdash; so a non-equity investor gets a diversification nudge, and a customer drifting away gets a real reason to come back. Across push, email, SMS, and WhatsApp.</p>
+    <p class="lead">The same behavioural foundation <strong>groups every customer into one of 18 behavioural segments</strong> &mdash; and tailors every message to the segment. A non-equity investor gets a diversification nudge; a customer drifting away gets a real reason to come back. Across push, email, SMS, and WhatsApp.</p>
     <div class="seg-grid" data-stagger>
       <img src="images/seg01.png" alt="Personalized communication example 1" loading="lazy" />
       <img src="images/seg02.png" alt="Personalized communication example 2" loading="lazy" />
