@@ -967,6 +967,10 @@
     .solution-box { background: linear-gradient(180deg, rgba(48,49,146,0.06), rgba(48,49,146,0.02)); }
     .solution-box .sol-label { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); margin-bottom: 0.5rem; }
     .solution-box p { color: #2f3550; font-size: 1.1rem; line-height: 1.6; }
+    .prob-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.2rem; margin: 1.8rem 0; }
+    .prob-card { background: #f6f8ff; border: 1px solid #e2e8ff; border-top: 3px solid var(--gold); border-radius: 12px; padding: 1.15rem 1.35rem; }
+    .prob-card .t { font-weight: 700; color: #2a2a55; font-size: 1.04rem; margin-bottom: 0.4rem; }
+    .prob-card .d { font-size: 0.93rem; color: var(--muted); line-height: 1.5; }
     /* logos in the nav */
     .topnav .brand { gap: 0.55rem; }
     .topnav .brand .logo-mo { height: 26px; width: auto; display: block; }
@@ -1072,7 +1076,11 @@
     <h2>One home page. <span style="color:var(--purple)">Same for everyone.</span></h2>
     <div class="problem-flow">
       <p class="lead">Most investing apps show every customer the <strong>same home page</strong> &mdash; the same tiles, the same tools &mdash; whether you're making your first SIP or trading options every morning.</p>
-      <p class="problem-punch">So the right products stay buried, and every message feels like <span class="hl">spam</span>.</p>
+      <div class="prob-grid" data-stagger>
+        <div class="prob-card"><div class="t">Discovery breaks</div><div class="d">Relevant products sit buried under widgets the customer will never open.</div></div>
+        <div class="prob-card"><div class="t">Messages feel like spam</div><div class="d">One broadcast goes to everyone &mdash; driving fatigue and unsubscribes.</div></div>
+        <div class="prob-card"><div class="t">The right fit never meets</div><div class="d">The investors who'd benefit most never find the product.</div></div>
+      </div>
       <div class="solution-box">
         <span class="sol-label">The Solution</span>
         <p>The <strong>MO Personalization Suite</strong> rebuilds the home page around each investor &mdash; and tailors every communication to how they actually invest. One foundation, live on the RIISE app today.</p>
